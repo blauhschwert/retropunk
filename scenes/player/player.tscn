@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://4luigxc1gamj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7p2l"]
+size = Vector2(33, 35)
+
+[node name="Player" type="CharacterBody2D" unique_id=1298891203]
+z_index = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1715737900]
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_x7p2l")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=862436379]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -17.0
+offset_right = 14.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.81, 0.13742998, 0.048600003, 1)

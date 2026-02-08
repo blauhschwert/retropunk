@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://rpba6edoxpm8"]
+
+[ext_resource type="FontFile" uid="uid://csd02kxkdpwdb" path="res://assets/fonts/ARCADECLASSIC.TTF" id="1_sl1te"]
+[ext_resource type="Script" uid="uid://e23ns0dbcm3w" path="res://scenes/scripts/buttons/button_effects.gd" id="2_fe2o3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe2o3"]
+bg_color = Color(0.7416668, 0, 0.89, 1)
+skew = Vector2(0.15, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.49166673, 0, 0.59, 1)
+border_blend = true
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g8jr"]
+bg_color = Color(0.42500007, 0, 0.51, 1)
+skew = Vector2(0.15, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.49166673, 0, 0.59, 1)
+border_blend = true
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1kxf"]
+bg_color = Color(0.8333335, 0, 1, 0.69411767)
+skew = Vector2(0.15, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.49166673, 0, 0.59, 1)
+border_blend = true
+shadow_size = 5
+
+[node name="MainMenu" type="CanvasLayer" unique_id=152745569]
+
+[node name="Button" type="Button" parent="." unique_id=1837183328]
+offset_right = 256.0
+offset_bottom = 73.14286
+theme_override_colors/font_outline_color = Color(0.615, 0.23000002, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_sl1te")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fe2o3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1g8jr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m1kxf")
+text = "Button"
+
+[node name="ButtonEffectsModule" type="Node" parent="Button" unique_id=986566626]
+script = ExtResource("2_fe2o3")
+metadata/_custom_type_script = "uid://e23ns0dbcm3w"

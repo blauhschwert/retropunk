@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://btv2lobqcdtpn"]
+
+[ext_resource type="Script" uid="uid://c6m32p5gm8iws" path="res://scenes/scripts/game_2d.gd" id="1_icntc"]
+[ext_resource type="FontFile" uid="uid://csd02kxkdpwdb" path="res://assets/fonts/ARCADECLASSIC.TTF" id="4_2oatk"]
+[ext_resource type="PackedScene" uid="uid://8yryxsvdbk51" path="res://scenes/ProcGen/proc_gen.tscn" id="4_w2ohb"]
+
+[sub_resource type="Theme" id="Theme_w2ohb"]
+Label/colors/font_outline_color = Color(0.8, 0.8, 0.8, 1)
+Label/colors/font_shadow_color = Color(0.7360002, 0, 0.92, 0.73333335)
+Label/constants/shadow_outline_size = 3
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("4_2oatk")
+
+[node name="Game2D" type="Node2D" unique_id=1546696010]
+script = ExtResource("1_icntc")
+
+[node name="procGen" parent="." unique_id=395918406 instance=ExtResource("4_w2ohb")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=474757037]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=548852903]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 48.0
+grow_horizontal = 2
+color = Color(0.03, 0.03, 0.03, 0.5019608)
+
+[node name="DataContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1131693161]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 48.0
+grow_horizontal = 2
+
+[node name="Level" type="Label" parent="CanvasLayer/DataContainer" unique_id=416239891]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+theme = SubResource("Theme_w2ohb")
+theme_override_font_sizes/font_size = 24
+text = "Level :"
+vertical_alignment = 1
+
+[node name="HP" type="Label" parent="CanvasLayer/DataContainer" unique_id=967626263]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+theme = SubResource("Theme_w2ohb")
+theme_override_font_sizes/font_size = 24
+text = "HP : "
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="CanvasLayer/DataContainer" unique_id=546857607]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+theme = SubResource("Theme_w2ohb")
+theme_override_fonts/font = ExtResource("4_2oatk")
+theme_override_font_sizes/font_size = 24
+text = "Score :"
+vertical_alignment = 1

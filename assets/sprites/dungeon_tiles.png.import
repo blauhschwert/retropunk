@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://exrrfolf5325"
-path="res://.godot/imported/atlas.png-660585e3342555707017f1290faf6341.ctex"
+uid="uid://dayog38vbb3b"
+path="res://.godot/imported/dungeon_tiles.png-cd8e98f0e2476557a661bd1328346eca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/atlas.png"
-dest_files=["res://.godot/imported/atlas.png-660585e3342555707017f1290faf6341.ctex"]
+source_file="res://assets/sprites/dungeon_tiles.png"
+dest_files=["res://.godot/imported/dungeon_tiles.png-cd8e98f0e2476557a661bd1328346eca.ctex"]
 
 [params]
 

@@ -11,14 +11,31 @@ config_version=5
 [application]
 
 config/name="retropunk"
+run/main_scene="uid://8yryxsvdbk51"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [file_customization]
 
 folder_colors={
-"res://assets/": "yellow"
+"res://assets/": "yellow",
+"res://scenes/": "purple"
 }
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="World"
+2d_physics/layer_3="Background"
+2d_physics/layer_4="Obstacles"
+2d_physics/layer_5="Items"
+2d_physics/layer_6="Enemys"
 
 [physics]
 
@@ -26,6 +43,7 @@ folder_colors={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

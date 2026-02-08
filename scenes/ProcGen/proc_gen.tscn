@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://8yryxsvdbk51"]
+
+[ext_resource type="Script" uid="uid://pmhp7lyorgjk" path="res://scenes/scripts/walker.gd" id="1_nsovp"]
+[ext_resource type="TileSet" uid="uid://2frjl5skxr7o" path="res://assets/resources/ground_tile.tres" id="3_6sakl"]
+[ext_resource type="TileSet" uid="uid://bumegktsaubc7" path="res://assets/resources/tut_dungeon_set.tres" id="3_nsovp"]
+[ext_resource type="Script" uid="uid://ba26tkr0maybd" path="res://scenes/ProcGen/player_handler.gd" id="4_4b7s8"]
+[ext_resource type="PackedScene" uid="uid://4luigxc1gamj" path="res://scenes/player/player.tscn" id="5_6sakl"]
+[ext_resource type="Script" uid="uid://dv8q76c475183" path="res://scenes/ProcGen/exit_handler.gd" id="6_0cyfy"]
+[ext_resource type="Script" uid="uid://rppirvn1lrwm" path="res://scenes/ProcGen/object_handler.gd" id="7_3kgo6"]
+
+[node name="procGen" type="Node2D" unique_id=395918406]
+script = ExtResource("1_nsovp")
+is_instant = true
+max_iterations = 570
+costum_viewport_size = Vector2(1280, 720)
+step_per_frame = 2
+ground_tile_coords = Vector2i(3, 0)
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=2095196610]
+tile_set = ExtResource("3_6sakl")
+
+[node name="background" type="TileMapLayer" parent="." unique_id=1631197316]
+tile_set = ExtResource("3_nsovp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1805121796]
+limit_enabled = false
+
+[node name="PlayerHandler" type="Node2D" parent="." unique_id=1459423068]
+script = ExtResource("4_4b7s8")
+player_scene = ExtResource("5_6sakl")
+
+[node name="ExitHandler" type="Node2D" parent="." unique_id=1296031652 node_paths=PackedStringArray("ground_layer")]
+script = ExtResource("6_0cyfy")
+ground_layer = NodePath("../Ground")
+
+[node name="ObjectHandler" type="Node2D" parent="." unique_id=883706900 node_paths=PackedStringArray("ground_layer", "exit_handler")]
+script = ExtResource("7_3kgo6")
+ground_layer = NodePath("../Ground")
+exit_handler = NodePath("../ExitHandler")
+enemy_count = 2
+energy_count = 2
+misc_count = 3
