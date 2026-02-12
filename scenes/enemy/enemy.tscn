@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dwq5liqf3ucj0"]
+
+[ext_resource type="Texture2D" uid="uid://e5anw81tvl10" path="res://assets/sprites/enemys/slime_00.png" id="1_4a83h"]
+[ext_resource type="Script" uid="uid://erkrvvrtbai3" path="res://scenes/enemy/enemy.gd" id="1_40wdo"]
+[ext_resource type="PackedScene" uid="uid://du0hsoexq84q1" path="res://scenes/ui/life_bar/live_bar.tscn" id="2_a3pup"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a3pup"]
+radius = 11.045361
+
+[node name="Enemy" type="Area2D" unique_id=1389450078]
+scale = Vector2(3, 3)
+script = ExtResource("1_40wdo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1927646748]
+position = Vector2(0.3333333, -11.333334)
+texture = ExtResource("1_4a83h")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1173779566]
+position = Vector2(0.6666667, -10.000001)
+shape = SubResource("CircleShape2D_a3pup")
+
+[node name="live_bar" parent="." unique_id=1455337233 instance=ExtResource("2_a3pup")]
+offset_left = -25.0
+offset_top = -45.000004
+offset_right = 55.0
+offset_bottom = -25.000004
+max_health = null
+
+[connection signal="health_depleted" from="live_bar" to="." method="_on_live_bar_health_depleted"]

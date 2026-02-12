@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2a1uqsg5w2ap"
-path="res://.godot/imported/Robo.png-22ee56ada7c067d97b38f22a3e3ddce2.ctex"
+uid="uid://b8ckhptpupenq"
+path="res://.godot/imported/RetroPunk01_terrain.png-3995e412d4c6e64e92081dc5efb97c74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Robo.png"
-dest_files=["res://.godot/imported/Robo.png-22ee56ada7c067d97b38f22a3e3ddce2.ctex"]
+source_file="res://assets/sprites/tileset/RetroPunk01_terrain.png"
+dest_files=["res://.godot/imported/RetroPunk01_terrain.png-3995e412d4c6e64e92081dc5efb97c74.ctex"]
 
 [params]
 

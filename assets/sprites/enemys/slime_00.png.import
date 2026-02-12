@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8ckhptpupenq"
-path="res://.godot/imported/RetroPunk01_terrain.png-91908f3d8e18dee4cfb6e17c0b3d30ad.ctex"
+uid="uid://e5anw81tvl10"
+path="res://.godot/imported/slime_00.png-2f67975a9800a52c7b0c0f7065452351.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/RetroPunk01_terrain.png"
-dest_files=["res://.godot/imported/RetroPunk01_terrain.png-91908f3d8e18dee4cfb6e17c0b3d30ad.ctex"]
+source_file="res://assets/sprites/enemys/slime_00.png"
+dest_files=["res://.godot/imported/slime_00.png-2f67975a9800a52c7b0c0f7065452351.ctex"]
 
 [params]
 

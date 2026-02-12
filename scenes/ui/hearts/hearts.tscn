@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cu6pcrbg0ihua"]
+
+[ext_resource type="Script" uid="uid://bfwwdc78ms6ab" path="res://scenes/ui/hearts/hearts.gd" id="1_jvu4i"]
+[ext_resource type="Texture2D" uid="uid://da7nno7usyadu" path="res://assets/sprites/heart.png" id="1_orrq2"]
+
+[node name="Hearts" type="CanvasLayer" unique_id=1227070282]
+script = ExtResource("1_jvu4i")
+
+[node name="heart" type="Sprite2D" parent="." unique_id=1780738240]
+position = Vector2(45, 125)
+scale = Vector2(3, 3)
+texture = ExtResource("1_orrq2")
+hframes = 5

@@ -29,3 +29,4 @@ This project is developed with **Godot** and focuses on raw gameplay, style, and
 
 ## 📖 Tutorials
 - Rougelike : https://www.udemy.com/course/create-a-procedurally-generated-2d-roguelike-in-godot-4/
+- Sprites : login4donald

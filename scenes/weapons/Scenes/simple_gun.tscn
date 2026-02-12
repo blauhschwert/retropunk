@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bq7qel31xtqsh"]
+
+[ext_resource type="Script" uid="uid://chbc0du24ggh0" path="res://scenes/weapons/Script/simple_gun.gd" id="1_nu2y0"]
+[ext_resource type="Texture2D" uid="uid://dqc38t3agcgy5" path="res://assets/sprites/weapons/weapons.png" id="1_shuy4"]
+[ext_resource type="PackedScene" uid="uid://c81k0lqo0o1e5" path="res://scenes/weapons/Scenes/bullet.tscn" id="2_u3hie"]
+
+[node name="simple_gun" type="Node2D" unique_id=2125535801 node_paths=PackedStringArray("spawn_position")]
+scale = Vector2(2, 2)
+script = ExtResource("1_nu2y0")
+bullet_scene = ExtResource("2_u3hie")
+spawn_position = NodePath("Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=786959461]
+z_index = 1
+position = Vector2(13.5, -2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=945795861]
+position = Vector2(9, -2)
+texture = ExtResource("1_shuy4")
+hframes = 3

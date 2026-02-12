@@ -17,15 +17,14 @@ signal reset_started # sent when restarting the level
 @export var borders: int = 3
 @export var step_per_frame: int = 10
 
-
 @export_category("TileMapLaver Data")
 @export var ground_tile_coords: Vector2i = Vector2i(0,0)
 @export var background_tile_coords: Vector2i = Vector2i(1,1)
 
-
 @onready var ground_layer: TileMapLayer = $Ground
 @onready var background_layer: TileMapLayer = $background
 @onready var camera_2d: Camera2D  = $Camera2D
+@onready var player_handler = $PlayerHandler
 
 var walkers: Array[Vector2i] = []
 var iteration_count : int = 0
@@ -50,6 +49,8 @@ func _ready() -> void:
 		camera_2d.zoom = Vector2(1, 1)
 		
 	reset_simulation()
+	
+	
 
 func _process(delta: float) -> void:
 	choose_generation()
@@ -163,5 +164,3 @@ func create_level_instant():
 	# complete the map by filling the background
 	emit_signal("ground_tilemap_completed")
 	fill_background_terrain()
-	
-	

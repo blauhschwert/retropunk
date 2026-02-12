@@ -23,7 +23,12 @@ tile_set = ExtResource("3_6sakl")
 tile_set = ExtResource("3_nsovp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1805121796]
-limit_enabled = false
+enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+editor_draw_limits = true
 
 [node name="PlayerHandler" type="Node2D" parent="." unique_id=1459423068]
 script = ExtResource("4_4b7s8")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6m32p5gm8iws" path="res://scenes/scripts/game_2d.gd" id="1_icntc"]
 [ext_resource type="FontFile" uid="uid://csd02kxkdpwdb" path="res://assets/fonts/ARCADECLASSIC.TTF" id="4_2oatk"]
+[ext_resource type="PackedScene" uid="uid://du0hsoexq84q1" path="res://scenes/ui/life_bar/live_bar.tscn" id="4_js4u1"]
 [ext_resource type="PackedScene" uid="uid://8yryxsvdbk51" path="res://scenes/ProcGen/proc_gen.tscn" id="4_w2ohb"]
 
 [sub_resource type="Theme" id="Theme_w2ohb"]
@@ -31,7 +32,11 @@ anchor_right = 1.0
 offset_bottom = 48.0
 grow_horizontal = 2
 
-[node name="Level" type="Label" parent="CanvasLayer/DataContainer" unique_id=416239891]
+[node name="Level" type="HBoxContainer" parent="CanvasLayer/DataContainer" unique_id=445528041]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Level" type="Label" parent="CanvasLayer/DataContainer/Level" unique_id=416239891]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -40,16 +45,23 @@ theme_override_font_sizes/font_size = 24
 text = "Level :"
 vertical_alignment = 1
 
-[node name="HP" type="Label" parent="CanvasLayer/DataContainer" unique_id=967626263]
-custom_minimum_size = Vector2(120, 0)
+[node name="HP" type="HBoxContainer" parent="CanvasLayer/DataContainer" unique_id=861045421]
+custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
-size_flags_horizontal = 6
-theme = SubResource("Theme_w2ohb")
-theme_override_font_sizes/font_size = 24
-text = "HP : "
-vertical_alignment = 1
 
-[node name="Score" type="Label" parent="CanvasLayer/DataContainer" unique_id=546857607]
+[node name="live_bar" parent="CanvasLayer/DataContainer/HP" unique_id=1455337233 instance=ExtResource("4_js4u1")]
+custom_minimum_size = Vector2(40, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="live_label" parent="CanvasLayer/DataContainer/HP/live_bar" index="1" unique_id=71348981]
+theme_override_font_sizes/font_size = 32
+
+[node name="Score" type="HBoxContainer" parent="CanvasLayer/DataContainer" unique_id=35292028]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Score" type="Label" parent="CanvasLayer/DataContainer/Score" unique_id=546857607]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -58,3 +70,5 @@ theme_override_fonts/font = ExtResource("4_2oatk")
 theme_override_font_sizes/font_size = 24
 text = "Score :"
 vertical_alignment = 1
+
+[editable path="CanvasLayer/DataContainer/HP/live_bar"]

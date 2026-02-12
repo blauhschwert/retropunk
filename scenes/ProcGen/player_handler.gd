@@ -38,10 +38,15 @@ func _on_ground_tilemap_completed():
 	
 	# Instance the player
 	if player_scene:
-		var player = player_scene.instantiate()
+		player = player_scene.instantiate()
 		add_child(player)
 		var tile_position = ground_layer.map_to_local(leftmost_tile)
 		player.position = tile_position
+		
+		# this is for connecting the playwer handler to the player signal
+		if player.has_signal("player_dead"):
+			player.player_dead.connect(_on_player_dead)
+		
 	else:
 		push_error("Player Scene not assigned")
 
@@ -50,6 +55,13 @@ func get_player() -> Node:
 
 func _on_reset_started():
 	# remove player during reset
-	if player:
-		player.queue_free()
-		player = null
+	for i in self.get_children():
+		i.queue_free()
+
+func _on_player_dead():
+	var walker = get_node_or_null(walker_path)
+	if walker and walker.has_method("reset_simulation"):
+		walker.emit_signal("reset_started")
+		walker.reset_simulation()
+	else:
+		push_error("Walker node or reset simulation method not found")
